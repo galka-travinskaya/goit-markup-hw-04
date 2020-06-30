@@ -157,10 +157,20 @@ address {
     align-items: center;
 }
 
-.contacts .icon-contacts:hover,
-.contacts .icon-contacts:focus {
+.contact-link:hover,
+.contact-link:focus {
     fill: var(--accent-color)
 }
+
+.contact-link:hover svg,
+.contact-link:focus svg {
+    fill: currentColor
+}
+
+/*.contacts .icon-contacts:hover,
+.contacts .icon-contacts:focus {
+    fill: var(--accent-color)
+}*/
 
 .contacts .icon-contacts {
     display: inline-block;
@@ -248,7 +258,8 @@ address {
 .button:hover,
 .button:focus {
     color: var(--primary-white-color);
-    background-color: var(--accent-color)
+    background-color: var(--accent-color);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .button-primary {
@@ -348,6 +359,15 @@ address {
     height: 70px;
 }
 
+.benefits .desk {
+    margin-top: 30px;
+
+    color: var(--primary-text-color);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
 .subject {
     margin-bottom: 10px;
 
@@ -430,18 +450,21 @@ address {
     align-items: center;
 }
 
-.card-icon {
-    display: flex;
+.card-icon a {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    fill: var(--primary-icon-color);
 }
 
-.card-icon:hover,
-.card-icon:focus {
+.card-icon:hover a,
+.card-icon:focus a {
     background-color: var(--accent-color);
+    color: var(--primary-white-color);
+    fill: currentColor;
 }
 
 .card-icon:not(:nth-child(4n)) {
@@ -449,17 +472,16 @@ address {
 }
 
 .icon-link {
-    display: block;
     width: 20px;
     height: 20px;
-    fill: var(--primary-icon-color);
-    justify-content: space-between;
-   
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
 }
 
-.icon-link:hover {
+/*.icon-link:hover {
     fill: var(--primary-white-color);
-}
+}*/
 
 /*Клиенты*/
 .clients {
@@ -468,20 +490,30 @@ address {
 }
 
 .clients .item {
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    box-sizing: border-box;
     margin-right: 30px;
     height: 90px;
     width: calc((100% - 150px) / 6);
     border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    fill: var(--primary-text-color)
+    border-radius: 4px;*/
+    /*fill: var(--primary-text-color)*/
+}
+
+/*.clients .item:not(:last-child) {
+    margin-right: 30px;
+}*/
+
+.clients .item:last-child {
+    margin-right: 0px;
 }
 
 .clients .item:hover,
 .clients .item:focus {
     border-color: var(--accent-color);
+    color: var(--accent-color)
 }
 
 .icon-clients {
@@ -490,11 +522,20 @@ address {
     align-items: center;
     width: 170px;
     height: 90px;
+    fill: var(--primary-icon-color)
+    /*border: 1px solid #AFB1B8;
+    border-radius: 4px;*/
 }
 
 .icon-clients:hover,
 .icon-clients:focus {
     color: var(--accent-color);
+    /*fill: currentColor;*/
+}
+
+.icon-clients:hover svg,
+.icon-clients:focus svg {
+    fill: currentColor
 }
 
 .icon-logo {
@@ -523,6 +564,11 @@ address {
 
 .site-menu:not(:nth-child(3n)) {
     margin-right: 30px;
+}
+
+.site-menu:hover,
+.site-menu:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .section-portfolio .site-menu:not(:nth-last-child(-n + 3)) {
@@ -626,7 +672,7 @@ address {
     height: 44px;
     border-radius: 50%;
     fill: var(--primary-white-color);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
   }
 
 .footer-icon:not(:last-child) {
