@@ -167,18 +167,6 @@ address {
     fill: currentColor
 }
 
-/*.contacts .icon-contacts:hover,
-.contacts .icon-contacts:focus {
-    fill: var(--accent-color)
-}*/
-
-.contacts .icon-contacts {
-    display: inline-block;
-    margin-right: 10px;
-    fill: var(--primary-text-color);
-    align-items: center
-}
-
 .contacts .item {
     margin-right: 30px;
 }
@@ -196,6 +184,14 @@ address {
 .contact-link:focus {
     color: var(--accent-color)
 }
+
+.contacts .icon-contacts {
+    display: inline-block;
+    margin-right: 10px;
+    fill: var(--primary-text-color);
+    align-items: center
+}
+
 
 /*main*/
 .container {
@@ -315,6 +311,7 @@ address {
     padding-bottom: 94px;
 }
 
+
 /*Приоритет*/
 .section-title {
     margin-bottom: 50px;
@@ -334,6 +331,7 @@ address {
     display: block;
     justify-content: center;
     align-items: center;
+
     margin-right: 30px;
     height: 120px;
     width: calc((100% - 90px) / 4);
@@ -347,11 +345,11 @@ address {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 270px;
     height: 120px;
     border-radius: 4px;
     background-color: var(--background-button-color);
-
 }
 
 .benefits .icon-priority {
@@ -474,14 +472,8 @@ address {
 .icon-link {
     width: 20px;
     height: 20px;
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
 }
 
-/*.icon-link:hover {
-    fill: var(--primary-white-color);
-}*/
 
 /*Клиенты*/
 .clients {
@@ -490,21 +482,13 @@ address {
 }
 
 .clients .item {
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
     box-sizing: border-box;
     margin-right: 30px;
     height: 90px;
     width: calc((100% - 150px) / 6);
     border: 1px solid #AFB1B8;
-    border-radius: 4px;*/
-    /*fill: var(--primary-text-color)*/
+    border-radius: 4px;
 }
-
-/*.clients .item:not(:last-child) {
-    margin-right: 30px;
-}*/
 
 .clients .item:last-child {
     margin-right: 0px;
@@ -523,8 +507,6 @@ address {
     width: 170px;
     height: 90px;
     fill: var(--primary-icon-color)
-    /*border: 1px solid #AFB1B8;
-    border-radius: 4px;*/
 }
 
 .icon-clients:hover,
@@ -549,13 +531,30 @@ address {
 
 
 /*Портфолио*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container-portfolio {
+    width: 1200px;
+    padding-top: 93px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .section-portfolio {
     display: flex;
     flex-wrap: wrap;
-}
-
-.site-menu {
-    width: 370px;
 }
 
 .section-portfolio .site-menu {
@@ -577,6 +576,7 @@ address {
 
 .card-content {
     padding: 20px 24px;
+
     background: #FFFFFF;
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
@@ -616,6 +616,7 @@ address {
 .footer-container {
     padding-top: 60px;
     padding-bottom: 60px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -638,6 +639,7 @@ address {
 
 .link-footer {
     margin-bottom: 9px;
+
     color: var(--footer-link-color);
     font-style: normal
 }
@@ -652,6 +654,7 @@ address {
 
 .socials {
     margin-bottom: 20px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -683,16 +686,13 @@ address {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20px;
+    height: 20px;
     fill: var(--primary-white-color)
 }
 
 .footer-icon a:hover {
     background: var(--accent-color);
-}
-
-.footer-icon .icon-link {
-    width: 20px;
-    height: 20px;
 }
 
 .mailing {
@@ -705,6 +705,5 @@ address {
     width: 24px;
     height: 24px;
     margin-left: 10px;
-    /*text-align: center;*/
     justify-content: center;
 }
